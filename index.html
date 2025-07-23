@@ -15,14 +15,12 @@
 
 <body class="bg-gray-100">
   
-<!-- Hamburger Menu Button -->
 <div class="hamburger-menu lg:hidden">
   <button id="hamburger-toggle" class="text-gray-800 focus:outline-none">
     <i class="fas fa-bars text-2xl"></i>
   </button>
 </div>
 
-<!-- IFRAME -->
 <div class="iframe-container flex justify-center items-center w-full bg-white py-2" style="z-index: 100;">
   <iframe id="localscene" name="localscene" src="/CableUTP.github.io/Cabecera.html" frameborder="0" framespacing="0" border="0" style="width: 100%; max-width: 1074px; height: 108px;" title="Cabecera AMP">
     Lo sentimos, su navegador no soporta iframe. Por favor, actualice su navegador.
@@ -41,10 +39,9 @@
   <span class="text-slate-800 font-medium flex-shrink-0">6-1427200-4</span>
 </div>
 
-<!-- Main Content -->
 <main class="container mx-auto px-4 py-6" style="z-index: 100;">
   <div class="flex flex-col lg:flex-row gap-6">
-    <!-- Left Sidebar (Nuestras Marcas) -->
+    
     <aside class="sidebar bg-white p-10 rounded-r-lg shadow-md lg:h-[80vh] overflow-y-auto scrollbar-hide sidebar-hidden lg:sidebar-open">
       <div class="links-section bg-white mb-4 lg:hidden">
         <h2 class="text-lg font-bold text-gray-800 mb-4 pb-2 border-b">Listas de Precio</h2>
@@ -206,7 +203,6 @@
       </div>
     </div>
 
-    <!-- Right Sidebar (Listas de precio, Desktop only) -->
     <aside class="right-sidebar hidden lg:block w-full lg:w-1/6 bg-white p-2 rounded-lg shadow-md h-[80vh] overflow-y-auto scrollbar-hide">
       <div class="links-section bg-white">
         <iframe id="localscene" name="localscene" src="https://www.ds3comunicaciones.com/amphenol/listas.html" frameborder="0" framespacing="0" scrolling="auto" border="0" style="width: 100%; height: 449px;">
@@ -299,7 +295,6 @@
 </footer>
 
 <script>
-  // Hamburger menu toggle
   const hamburgerToggle = document.getElementById('hamburger-toggle');
   const sidebar = document.querySelector('.sidebar');
   const accordionToggle = document.getElementById('accordion-toggle');
@@ -310,7 +305,6 @@
     sidebar.classList.toggle('sidebar-open');
   });
 
-  // Accordion toggle for mobile only
   accordionToggle.addEventListener('click', () => {
     if (window.innerWidth < 1024) {
       accordionContent.classList.toggle('open');
@@ -319,13 +313,11 @@
     }
   });
 
-  // Image swap functionality
   function toExchangeImage(element) {
     const mainImg = document.getElementById('img_main');
     mainImg.src = element.src;
   }
 
-  // View image functionality
   function viewImage(src) {
     window.open(src, '_blank');
   }
